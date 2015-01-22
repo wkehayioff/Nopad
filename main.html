@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="Nopad" ng-csp>
     <head>
 	<style>
@@ -17,6 +17,7 @@
 	</style>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		
         <script src="js/lib/angular.min.js"></script>
 		
@@ -29,20 +30,15 @@
     </head>
     <body ng-controller="noteCtrl">
         <header>
-		
-            <h1>
-				<div style="float:left;">
-					<i class="fa fa-file-text-o"></i>
-					Nopad, the quick pad.
-				</div>
-			
 
-				<div style="float:right;width:23%;">
+				<span class="fa fa-file-text-o"></span>
+				Nopad, the quick pad.
+
+				<div>
 					Notes			
-					<button ng-click="loadNotes()"><i class="fa fa-refresh"></i></button>
-					<button ng-click="newNote()"><i class="fa fa-plus"></i></button>
+					<button ng-click="loadNotes()"><span class="fa fa-refresh"></span></button>
+					<button ng-click="newNote()"><span class="fa fa-plus"></span></button>
 				</span>
-			</h1>
         </header>
 		<div class="note" ng-show="activeNote">
 			<textarea ng-model="activeNote.body" ng-keyup="changed(activeNote);" maxlength=8000></textarea>
